@@ -105,6 +105,12 @@ selectors.previewOverlay.infoOverlay.style.color = `rgba(var(--color-dark))`;
 const preview = document.createElement('template')
 preview.innerHTML = `
 <style> 
+
+*{
+  box-sizing: border-box;
+}
+
+
 .preview {
   border-width: 0;
   width: 100%;
@@ -160,11 +166,12 @@ preview.innerHTML = `
 .preview__author {
   color: rgba(var(--color-dark), 0.4);
 } </style>
-
+<div class="preview">
 <img src=""  class="preview__image" ></img>
 <div class="preview__info">
   <h3 class="preview__title"></h3>
   <div class="preview__author"></div>
+  </div>
   </div>`;
   
   export class BookPreview extends HTMLElement {
